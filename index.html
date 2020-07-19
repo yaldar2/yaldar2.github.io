@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narrative Visualization- Yalda Rahmati</title>
+    <style>
+        .axis path,
+        .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+        }
+
+        .dot {
+        stroke: #000;
+        }
+        body{
+        background-color: whitesmoke;
+        }
+
+        svg {
+        background-color: white;
+        font-family: 'Lato';
+        }
+
+        .annotation-note-title, text.title {
+        font-weight: bold;
+        }
+
+        text.title {
+        font-size: 1.2em;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id = "container">
+        <h1>2010 with Annotations</h1>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
+
+        <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+
+        <div id = "vis-nav">
+            <a href="#" id="step1" class="step-link active">Viz-Scene 1</a>
+            <a href="#" id="step2" class="step-link">Viz-Scene 2</a>
+            <a href="#" id="step3" class="step-link">Viz-Scene 3</a>
+        </div>
+
+        <div id="vis-container">
+
+            <div id="vis-canvas">
+                <svg width=960 height=500></svg>
+                <script src= "index.js"></script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

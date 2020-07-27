@@ -17,7 +17,7 @@ var margin = {top: 30, right: 20, bottom: 60, left: 80},
 	                  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
                   
                   // Read Data
-	              d3.csv("https://raw.githubusercontent.com/yaldar2/yaldar2.github.io/master/Car_2010_Ch_H.csv", function(error, data) {
+	              d3.csv("https://raw.githubusercontent.com/yaldar2/yaldar2.github.io/master/Car_2011_Ch_H.csv", function(error, data) {
                   if (error) throw error;
 
                   data.forEach(function(d) {
@@ -87,12 +87,12 @@ var margin = {top: 30, right: 20, bottom: 60, left: 80},
                   // Add Annotation
                     var annotations3 = [
                     {
-                        note: { 
-                          label: "2010 Chevrolet Silverado has lower highway MPG compared to other vehicles with similar city MPG.",
-                          wrap: 225,
+                        note: {
+                            label: "2011 Chevrolet Silverado has improved highway MPG but relatively lower city MPG compared to the 2010 model.",
+                            wrap: 225,
                         },
-                        x: X(21),
-                        y: Y(22),
+                        x: X(20),
+                        y: Y(23),
                         dy: 40,
                         dx: 40,
                         type: d3.annotationCalloutElbow,

@@ -11,38 +11,32 @@
 
 
 <body>
+
     <div id = "container">
 
         <h1>City/highway MPG and Horsepower of Chevrolet and Honda Models</h1>
 
         <div id = "message">
-            An inverse relationship can be observed between cars' horsepower and city/highway MPG. While Chevrolet had more powerful cars on average, Honda's cars had higher city/highway MPG in 2010.
+            Compared to the previous year, 2011 Chevrolet models has covered a wider range of city/highway MPG. Honda, however, has released cars with higher city/highway MPG in 2011 compared to 2010.
         </div>
-
+    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
 
         <div id="vis-nav">
-            <a href="index.html" id="step1" class="step-link active">2010</a>
-            <a href="index2011.html" id="step2" class="step-link">2011</a>
+            <a href="index.html" id="step1" class="step-link">2010</a>
+            <a href="index2011.html" id="step2" class="step-link active">2011</a>
             <a href="index2012.html" id="step3" class="step-link">2012</a>      
         </div>
-
 
         <div id="vis-container">
 
             <div id="annotation-steps">
-
-                <div class="annotation-step" id="step1-annotation" style="display: block;">
-                    <div class="annotation" id="step1-high-annotation" >
-                        <p2 id="show">Mouseover the data to see the individual trends for Chevrolet and Honda cars.</p2>         
-                    </div>
-                </div>
     
                 <div class="annotation-step" id="step2-annotation" style="display:block;">
                     <div class="annotation" id="step2-high-annotation" >
-                        <h2>2010</h2>  
+                        <h2>2011</h2>  
                     </div>
                 </div>
     
@@ -50,8 +44,9 @@
 
             <div id="vis-canvas">
                 <svg width=960 height=500></svg>
-                <script src= "index.js"></script>
+                <script src= "index2011.js"></script>
             </div>
+
         </div>
     </div>
 

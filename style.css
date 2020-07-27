@@ -1,0 +1,103 @@
+h1 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+ }
+
+#message {
+    margin-right: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+ }
+
+.axis path,.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.dot {
+    stroke: #000;
+}
+body{
+    background-color: whitesmoke;
+}
+
+svg {
+    background-color: white;
+    font-family: 'Lato';
+}
+
+
+text.title {
+    font-size: 1.2em;
+}
+    
+a.step-link {
+    background-color: #444;
+    color: rgb(161, 158, 158);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 4px 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+    
+a.step-link:hover, a.active {
+    color: rgb(250, 249, 249);
+}
+
+a.active {
+    color: rgba(136, 250, 42, 0.945);
+}
+
+#container{
+    margin: auto;
+    padding-top: 5px;
+    width: 980px;
+}
+
+#vis-container {
+    position: relative;
+    width: 980px;
+    height: 510px;
+    margin-top: 10px;
+}
+
+#vis-nav {
+    margin-top: 24px;
+}
+
+/* Annotations */
+.annotation-note-label {
+    font-size: 14px;
+}
+
+.annotation-step {
+    position: absolute;
+    display: none;
+}
+
+#annotation-steps {
+    position: absolute;
+    z-index: 40;
+}
+
+.annotation {
+    position: absolute;
+}
+
+#step1-high-annotation {
+    left: 170px;
+    top: 130px;
+    width: 140px;
+    font-size: 14px;
+    font-style: italic;
+    color: rgb(110, 109, 109);
+}
+
+#step2-high-annotation {
+    left: 887px;
+    top: 435px;
+    width: 140px;
+    font-size: 18px;
+}

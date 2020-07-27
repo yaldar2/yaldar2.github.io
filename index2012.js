@@ -17,7 +17,7 @@ var margin = {top: 30, right: 20, bottom: 60, left: 80},
 	                  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
                   
                   // Read Data
-	              d3.csv("https://raw.githubusercontent.com/yaldar2/yaldar2.github.io/master/Car_2010_Ch_H.csv", function(error, data) {
+	              d3.csv("https://raw.githubusercontent.com/yaldar2/yaldar2.github.io/master/Car_2012_Ch_H.csv", function(error, data) {
                   if (error) throw error;
 
                   data.forEach(function(d) {
@@ -84,28 +84,6 @@ var margin = {top: 30, right: 20, bottom: 60, left: 80},
                       const X= d3.scaleLinear().range([0, width]).domain([6,32]);
                       const Y= d3.scaleLinear().range([height, 0]).domain([10,42]);
 
-                  // Add Annotation
-                    var annotations3 = [
-                    {
-                        note: { 
-                          label: "2010 Chevrolet Silverado has lower highway MPG compared to other vehicles with similar city MPG.",
-                          wrap: 225,
-                        },
-                        x: X(21),
-                        y: Y(22),
-                        dy: 40,
-                        dx: 40,
-                        type: d3.annotationCalloutElbow,
-                        connector: { end: "arrow" },
-                    }].map(function(d){ d.color = "Black"; return d});
-
-                  var makeAnnotations = d3.annotation()
-                    .type(d3.annotationLabel)
-                    .annotations(annotations3)
-
-                  svg.append("g")
-                  .attr("class", "annotation-test")
-                  .call(makeAnnotations)
 
                   // Add the Legend
                   var legend = svg.selectAll(".legend")

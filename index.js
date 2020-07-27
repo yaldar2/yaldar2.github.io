@@ -128,4 +128,40 @@ var margin = {top: 30, right: 20, bottom: 60, left: 80},
                       .text(function(d) { return d; });
 
 
+                  // Size Legend
+                  var legend2 = svg.append("g")
+                      .attr("class", "legend2");
+
+
+                  legend2.append("circle")
+                      .attr("cx", 24)
+                      .attr("cy", 48)
+                      .attr("r", 3)
+                      .style("fill", "none")
+                      .style("stroke", "black")
+
+                  legend2.append("text")
+                      .attr("x", 48)
+                      .attr("y", 49)
+                      .attr("dy", ".35em")
+                      .style("text-anchor", "start")
+                      .text("Salam");
+
+                  
+
+                  // Trigger for mouse over event
+                  var mousetext = svg.append("g")
+                  .attr("class", "mousetext");
+
+                  mousetext.append("text")
+                  .attr("x", 215)
+                  .attr("y", 0)
+                  .attr("dy", ".35em")
+                  .style("text-anchor", "start")
+                  .style("font-style", "italic")
+                  .style("font-size", "14px")
+                  .style("fill", "grey")
+                  .text("Mouseover the data to see the individual trends for Chevrolet and Honda cars.");
+
+
                 });

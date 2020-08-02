@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Narrative Visualization- Yalda Rahmati</title>
+</head>
+
+
+<body>
+
+    <div id = "container">
+
+        <h1>City/highway MPG and Horsepower of Chevrolet and Honda Models</h1>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+
+        <div id="vis-nav">
+            <a href="index.html" id="step1" class="step-link active">2010</a>
+            <a href="index2011.html" id="step2" class="step-link">2011</a>
+            <a href="index2012.html" id="step3" class="step-link">2012</a>      
+        </div>
+
+        <div id="vis-container">
+
+            <div id="annotation-steps">
+    
+                <div class="annotation-step" id="step2-annotation" style="display:block;">
+                    <div class="annotation" id="step2-high-annotation" >
+                        <h2>2010</h2>  
+                    </div>
+                </div>
+    
+            </div>
+
+            <div id="vis-canvas">
+                <svg width=960 height=500></svg>
+                <script src= "index2010.js"></script>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

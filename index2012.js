@@ -121,7 +121,7 @@ svg.append("g").attr("class", "annotationLabel")
     .attr("dy", ".35em")
     .style("text-anchor", "start")
     .style("font-size", "14px")
-    .text("Chevrolet and Honda models have");
+    .text("Chevrolet and Honda models had");
 
 svg.append("g").attr("class", "annotationLabel")
     .append("text")

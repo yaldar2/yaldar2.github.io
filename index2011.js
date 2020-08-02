@@ -17,7 +17,7 @@ var svg = d3.select("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    
+
 // Read Data
 d3.csv("https://raw.githubusercontent.com/yaldar2/yaldar2.github.io/master/Car_2011_Ch_H.csv", function(error, data) {
 if (error) throw error;
@@ -112,7 +112,7 @@ svg.append("g").attr("class", "annotationLabel")
     .attr("dy", ".35em")
     .style("text-anchor", "start")
     .style("font-size", "14px")
-    .text("models have covered a wider range of");
+    .text("models had covered a wider range of");
 
 svg.append("g").attr("class", "annotationLabel")
     .append("text")
@@ -130,7 +130,7 @@ svg.append("g").attr("class", "annotationLabel")
     .attr("dy", ".35em")
     .style("text-anchor", "start")
     .style("font-size", "14px")
-    .text("have higher city/highway MPG in 2011.");
+    .text("had higher city/highway MPG in 2011.");
 
 
 // Add the Color Legend

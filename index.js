@@ -1,7 +1,7 @@
 // Define Variables
 var margin = {top: 30, right: 20, bottom: 60, left: 80},
-                      width = 960 - margin.left - margin.right,
-                      height = 550 - margin.top - margin.bottom;
+	                  width = 960 - margin.left - margin.right,
+	                  height = 550 - margin.top - margin.bottom;
 
 var x = d3.scaleLinear().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
@@ -17,6 +17,7 @@ var svg = d3.select("svg")
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+
 // Read Data
 d3.csv("https://raw.githubusercontent.com/yaldar2/yaldar2.github.io/master/Car_2010_Ch_H.csv", function(error, data) {
 if (error) throw error;
@@ -26,6 +27,7 @@ d.City_MPG = +d.City_MPG;
 d.Highway_MPG = +d.Highway_MPG;
 d.Horsepower = +d.Horsepower;
 });
+
 
 // Add the X Axis
 svg.append("g")
@@ -55,6 +57,7 @@ svg.append("text")
 .style("text-anchor", "middle")
 .text("Highway MPG"); 
 
+
 // Add the Scatterplot
 svg.selectAll(".dot")
     .data(data)
@@ -80,6 +83,7 @@ svg.selectAll(".dot")
         .transition()
         .style("opacity", 1)
     });
+
 
 // Add Annotations
 
@@ -146,6 +150,7 @@ svg.append("g").attr("class", "annotationLabel")
     .style("font-size", "14px")
     .text("higher city/highway MPG in 2010.");
 
+
 // Add the Color Legend
 var legend = svg.selectAll(".legend")
     .data(color.domain())
@@ -166,6 +171,7 @@ legend.append("text")
     .style("text-anchor", "start")
     .style("font-size", "15px")
     .text(function(d) { return d; });
+
 
 // Add the Size Legend
 svg.append("g").attr("class", "sizeLegendTitle")
@@ -232,6 +238,7 @@ size_legend_3.append("text")
     .style("font-size", "15px")
     .text("550");
 
+
 // Add Trigger for the Mouseover Event
 var mousetext = svg.append("g")
 .attr("class", "mousetext");
@@ -255,5 +262,6 @@ mousetext.append("text")
 .style("font-size", "14px")
 .style("fill", "grey")
 .text("trends for Chevrolet and Honda models.");
+
 
 });

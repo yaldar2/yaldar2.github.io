@@ -12,7 +12,7 @@ var xAxis= d3.axisBottom(x.domain([6,32]))
 var yAxis= d3.axisLeft(y.domain([10,42]))
 
 var svg = d3.select("svg")
-    .attr("width", width + margin.left + margin.right + 15)
+    .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -73,7 +73,7 @@ svg.selectAll(".dot")
             return (dot.Make != d.Make)
             })
             .transition()
-            .style("opacity", 0.01)
+            .style("opacity", 0.03)
     })
     .on("mouseout", function(d){
         d3.selectAll('.dot')
@@ -83,6 +83,54 @@ svg.selectAll(".dot")
         .transition()
         .style("opacity", 1)
     });
+
+
+// Add Annotations
+
+// #1
+svg.append("rect")
+    .attr("x", 540)
+    .attr("y", 266)
+    .attr("width", 220)
+    .attr("height", 80)
+    .style("fill", "none")
+    .style("stroke", "black");
+
+svg.append("g").attr("class", "annotationLabel")
+    .append("text")
+    .attr("x", 547)
+    .attr("y", 278)
+    .attr("dy", ".35em")
+    .style("text-anchor", "start")
+    .style("font-size", "14px")
+    .text("Compared to 2010 and 2011 models,");
+
+svg.append("g").attr("class", "annotationLabel")
+    .append("text")
+    .attr("x", 547)
+    .attr("y", 296)
+    .attr("dy", ".35em")
+    .style("text-anchor", "start")
+    .style("font-size", "14px")
+    .text("average city/highway MPG of both");
+
+svg.append("g").attr("class", "annotationLabel")
+    .append("text")
+    .attr("x", 547)
+    .attr("y", 314)
+    .attr("dy", ".35em")
+    .style("text-anchor", "start")
+    .style("font-size", "14px")
+    .text("Chevrolet and Honda models have");
+
+svg.append("g").attr("class", "annotationLabel")
+    .append("text")
+    .attr("x", 547)
+    .attr("y", 332)
+    .attr("dy", ".35em")
+    .style("text-anchor", "start")
+    .style("font-size", "14px")
+    .text("increased in 2012.");
 
 
 // Add the Color Legend

@@ -12,7 +12,7 @@ var xAxis= d3.axisBottom(x.domain([6,32]))
 var yAxis= d3.axisLeft(y.domain([10,42]))
 
 var svg = d3.select("svg")
-    .attr("width", width + margin.left + margin.right + 15)
+    .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -73,7 +73,7 @@ svg.selectAll(".dot")
             return (dot.Make != d.Make)
             })
             .transition()
-            .style("opacity", 0.01)
+            .style("opacity", 0.03)
     })
     .on("mouseout", function(d){
         d3.selectAll('.dot')
@@ -86,53 +86,69 @@ svg.selectAll(".dot")
 
 
 // Add Annotations
-const X= d3.scaleLinear().range([0, width]).domain([6,32]);
-const Y= d3.scaleLinear().range([height, 0]).domain([10,42]);
 
-svg.append("line")
-    .style("stroke", "black")
-    .style("stroke-dasharray", "4,4")
-    .attr("x1", X(21))
-    .attr("y1", Y(22))
-    .attr("x2", X(22))
-    .attr("y2", Y(19.3));
-
+// #1
 svg.append("rect")
-    .attr("x", 530)
-    .attr("y", 326.4)
-    .attr("width", 215)
-    .attr("height", 65)
+    .attr("x", 570)
+    .attr("y", 250)
+    .attr("width", 245)
+    .attr("height", 44)
     .style("fill", "none")
-    .style("stroke", "black")
-    .style("stroke-dasharray", "4,4");
-
-// Text label
-svg.append("g").attr("class", "annotationLabel")
-    .append("text")
-    .attr("x", 537)
-    .attr("y", 340)
-    .attr("dy", ".35em")
-    .style("text-anchor", "start")
-    .style("font-size", "14px")
-    .text("2010 Chevrolet Silverado has lower");
+    .style("stroke", "black");
 
 svg.append("g").attr("class", "annotationLabel")
     .append("text")
-    .attr("x", 537)
-    .attr("y", 358)
+    .attr("x", 577)
+    .attr("y", 262)
     .attr("dy", ".35em")
     .style("text-anchor", "start")
     .style("font-size", "14px")
-    .text("highway MPG compared to other");
+    .text("Notice the inverse relationship between");
 
 svg.append("g").attr("class", "annotationLabel")
     .append("text")
-    .attr("x", 537)
-    .attr("y", 376)
+    .attr("x", 577)
+    .attr("y", 280)
     .attr("dy", ".35em")
     .style("text-anchor", "start")
     .style("font-size", "14px")
-    .text("car models with similar city MPG.");
+    .text("cars' horsepower and city/highway MPG.");
+
+// #2
+svg.append("rect")
+    .attr("x", 570)
+    .attr("y", 306)
+    .attr("width", 216)
+    .attr("height", 62)
+    .style("fill", "none")
+    .style("stroke", "black");
+
+svg.append("g").attr("class", "annotationLabel")
+    .append("text")
+    .attr("x", 577)
+    .attr("y", 318)
+    .attr("dy", ".35em")
+    .style("text-anchor", "start")
+    .style("font-size", "14px")
+    .text("While Chevrolet had more powerful");
+
+svg.append("g").attr("class", "annotationLabel")
+    .append("text")
+    .attr("x", 577)
+    .attr("y", 336)
+    .attr("dy", ".35em")
+    .style("text-anchor", "start")
+    .style("font-size", "14px")
+    .text("cars on average, Honda's cars had");
+
+    svg.append("g").attr("class", "annotationLabel")
+    .append("text")
+    .attr("x", 577)
+    .attr("y", 354)
+    .attr("dy", ".35em")
+    .style("text-anchor", "start")
+    .style("font-size", "14px")
+    .text("higher city/highway MPG in 2010.");
 
 
 // Add the Color Legend
